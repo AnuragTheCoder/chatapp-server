@@ -6,9 +6,9 @@ import { getBase64, getSockets } from "../lib/helper.js";
 const isProduction = process.env.NODE_ENV === "production";
 const cookieOptions = {
   maxAge: 15 * 24 * 60 * 60 * 1000,
-  sameSite: "Lax",
+  sameSite: "None",
   httpOnly: true,
-  secure: false,
+  secure: true,
 };
 
 const connectDB = (uri) => {
